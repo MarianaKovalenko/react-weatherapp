@@ -1,0 +1,17 @@
+.Main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.Main .column {
+  text-align: justify;
+  width: 160px;
+  height: 180px;
+  border: 1px solid black;
+  margin: 2px 5px 0;
+  padding-left: 5px;
+  padding-top: 0;
+}
+.Main .column .left {
+  color: rgb(190, 81, 51);
+}

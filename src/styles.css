@@ -1,0 +1,31 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  margin: 0 auto;
+  width: 360px;
+  height: 560px;
+  border: 1px solid black;
+  justify-content: center;
+  justify-items: center;
+  border-radius: 5px;
+  box-shadow: rgb(175, 161, 161) 3px 3px 10px;
+  background-size: 360px 560px;
+}
+.App #icon {
+  border-radius: 30% 0;
+  background-color: rgb(255, 255, 255, 0.4);
+}
+.App .c {
+  text-decoration: none;
+}
+.App .c:focus {
+  color: black;
+  font-size: x-large;
+}
+.App .f {
+  text-decoration: none;
+}
+.App .f:focus {
+  color: black;
+  font-size: x-large;
+}

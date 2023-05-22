@@ -1,4 +1,12 @@
-import logo from './logo.svg';
+import React from "react";
+import "./styles.css";
+
+import Header from "./header.js";
+import Form from "./Form.js";
+import Main from "./main.js";
+import Forecast from "./Forecast";
+import Footer from "./Footer";
+import background from "./images/kyivimg.jpg";
 import './App.css';
 
 function App() {

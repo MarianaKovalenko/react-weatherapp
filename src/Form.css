@@ -1,0 +1,14 @@
+.Form .container-search {
+  display: block;
+  margin: 0;
+  width: 360px;
+  padding: 0;
+}
+.Form .btn-primary {
+  background-color: #cce2f3;
+  border: solid 1px #5aaaff;
+  padding: 8px 13px;
+  margin: 2px;
+  color: #5aaaff;
+  border-radius: 30px;
+}
