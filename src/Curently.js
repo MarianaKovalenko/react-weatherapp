@@ -6,15 +6,15 @@ export default function Curently() {
     <div className="Curently">
       <div className="column">
         <div class="col-sm-10">
-          <h2>Curently</h2>
+          <h2 id="top">Curently</h2>
         </div>
         <div className="col-sm-10">
           <span id="curent-temp">-1</span>
-          <a href="#" class="c" id="C-temp">
+          <a href="#top" className="c" id="C-temp">
             °C
           </a>{" "}
           |
-          <a href="#" class="f" id="F-temp">
+          <a href="#top" className="f" id="F-temp">
             °F
           </a>
         </div>
@@ -23,21 +23,21 @@ export default function Curently() {
         </div>
         <div className="col-sm-10">
           min <span id="min-temp">-2</span>
-          <a href="#" class="c" id="C-tempMin">
+          <a href="#top" className="c" id="C-tempMin">
             °C
           </a>{" "}
           |
-          <a href="#" class="f" id="F-tempMin">
+          <a href="#top" className="f" id="F-tempMin">
             °F
           </a>
         </div>
         <div className="col-sm-10">
           max <span id="max-temp">+1</span>
-          <a href="#" class="c" id="C-tempMax">
+          <a href="#top" className="c" id="C-tempMax">
             °C
           </a>{" "}
           |
-          <a href="#" class="f" id="F-tempMax">
+          <a href="#top" className="f" id="F-tempMax">
             °F
           </a>
         </div>
