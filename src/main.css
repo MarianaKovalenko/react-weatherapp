@@ -1,9 +1,4 @@
-.Main {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-.Main .column {
+ .column {
   text-align: justify;
   width: 160px;
   height: 180px;
@@ -12,6 +7,6 @@
   padding-left: 5px;
   padding-top: 0;
 }
-.Main .column .left {
+ .column .left {
   color: rgb(190, 81, 51);
 }

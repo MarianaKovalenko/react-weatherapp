@@ -1,10 +1,9 @@
 import React from "react";
-import axios from "axios";
+
 import "./styles.css";
 
 import Header from "./header.js";
 import Form from "./Form.js";
-import Main from "./main.js";
 import Forecast from "./Forecast";
 import Footer from "./Footer";
 import background from "./images/kyivimg.jpg";
@@ -19,8 +18,7 @@ function App() {
       }}
     >
       <Header />
-      <Form />
-      <Main />
+      <Form defaultCity="Poltava"/>
       <Forecast />
       <Footer />
     </div>
