@@ -3,8 +3,7 @@ import snowflake from "./images/snowflake.gif";
 
 export default function Curently() {
   return (
-    <div className="Curently">
-      <div className="column">
+    <div className="Curently column">
         <div class="col-sm-10">
           <h2 id="top">Curently</h2>
         </div>
@@ -42,6 +41,5 @@ export default function Curently() {
           </a>
         </div>
       </div>
-    </div>
   );
 }

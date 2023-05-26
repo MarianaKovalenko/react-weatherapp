@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
-import Main from "./main"
+import Main from "./main";
+import FormatDate from "./FormatDate";
 
 
 import "./Form.css";
@@ -12,6 +13,7 @@ export default function Form(props) {
     console.log(response.data);
     setWeather({
       ready:true,
+      date:new Date(response.data.time*1000),
       city:response.data.city,
       temp:response.data.temperature.current,
       humidity:response.data.temperature.humidity,
@@ -44,7 +46,7 @@ export default function Form(props) {
               <h1>{weather.city.toUpperCase()}</h1>
             </div>
             <div className="col-sm-10" id="curently-date">
-              Friday:13:00
+              <FormatDate currentDate={weather.date}/>
             </div>
             <div className="col-sm-10">
               <div className="name-weather text-capitalize" id="description">

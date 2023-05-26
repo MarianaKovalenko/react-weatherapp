@@ -2,8 +2,7 @@ import React from "react";
 
 export default function City() {
   return (
-    <div className="City">
-      <div className="column">
+    <div className="City column">
         <div className="left">
           <div className="col-sm-10" id="city-title">
             <h1>KYIV</h1>
@@ -24,6 +23,5 @@ export default function City() {
           </div>
         </div>
       </div>
-    </div>
   );
 }

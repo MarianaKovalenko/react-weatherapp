@@ -18,7 +18,7 @@ function App() {
       }}
     >
       <Header />
-      <Form defaultCity="Poltava"/>
+      <Form defaultCity="Kyiv"/>
       <Forecast />
       <Footer />
     </div>

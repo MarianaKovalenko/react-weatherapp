@@ -5,7 +5,7 @@ import "./main.css"
 
 export default function Main() {
   return (
-    <div className="Main">
+    <div className="Main row justify-content-center">
       <City />
       <Curently />
     </div>
