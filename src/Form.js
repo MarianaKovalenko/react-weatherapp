@@ -7,6 +7,7 @@ import FormatDate from "./FormatDate";
 import "./Form.css";
 
 export default function Form(props) {
+  const[city, setCity] = useState(props.defaultCity)
 
   const [weather, setWeather] = useState({ready:false});
   function handleResponse(response){
@@ -23,21 +24,34 @@ export default function Form(props) {
     });
     
   }
+  function search(){
+    const key ="2cc11cocaf0f9420tbdaec31809b2ceb"
+  let url = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${key}&units=metric`
+  axios.get(url).then(handleResponse);
+  }
 
+
+  function handleSubmit(event){
+    event.preventDefault();
+    search();
+  }
+  function handleCityChange(event){
+    setCity(event.target.value)
+  }
 
   if(weather.ready){
     return (
-        <div >
-        <div className="Form d-block">
-        <form className="container-search" id="city">
-            <input type="text" placeholder="Change a city" id="city-input" />
-            <button type="submit" className="btn btn-primary ms-2" id="search">
+        <div>
+          <div className="Form d-block">
+            <form className="container-search" id="city" onSubmit={handleSubmit}>
+              <input type="text" placeholder="Change a city" id="city-input" onChange={handleCityChange}/>
+              <button type="submit" className="btn btn-primary ms-2" id="search">
               Search
-            </button>
-            <button type="button" className="btn btn-primary" id="location">
+              </button>
+              <button type="button" className="btn btn-primary" id="location">
               Location
-            </button>
-          </form>
+              </button>
+            </form>
           </div>
           <div className="row justify-content-center">
           <div className="column">
@@ -84,17 +98,11 @@ export default function Form(props) {
             <a href="#top" className="f" id="F-tempMax">°F</a>
           </div>
         </div>
-        </div>
-        </div>
-       
-        
-      
+      </div>
+        </div>     
     )
   } else {
-    const key ="2cc11cocaf0f9420tbdaec31809b2ceb"
-  let url = `https://api.shecodes.io/weather/v1/current?query=${props.defaultCity}&key=${key}&units=metric`
-  axios.get(url).then(handleResponse);
-
+    search()
   return (
     <div>
       <div className="Form d-flex">
@@ -112,6 +120,5 @@ export default function Form(props) {
       <Main />
     </div>
   )
-  
   }  
 }
