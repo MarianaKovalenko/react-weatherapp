@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import Main from "./main";
 import FormatDate from "./FormatDate";
-
+import UnitTemp from "./UnitTemp"
 
 import "./Form.css";
 
@@ -80,9 +80,7 @@ export default function Form(props) {
             <h2 id="top">Curently</h2>
           </div>
           <div className="col-sm-10">
-            <span id="curent-temp">{Math.round(weather.temp)}</span>
-            <a href="#top" className="c" id="C-temp">°C</a> |
-            <a href="#top" className="f" id="F-temp">°F</a>
+            <UnitTemp celc={weather.temp}/>
           </div>
           <div className="col-sm-10">
             <img id="icon" src={weather.icon} alt={weather.description} width="48px" />
