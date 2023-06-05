@@ -1,6 +1,6 @@
 import React, { useState } from "react";
  
- export default function UnitTemp(props){
+ export default function UnitFeel(props){
      const[unit, setUnit] = useState("metrics");
      function convertFahrenheit(event){
          event.preventDefault();

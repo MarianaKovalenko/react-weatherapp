@@ -19,7 +19,7 @@ function App() {
     >
       <Header />
       <Form defaultCity="Kyiv"/>
-      <Forecast />
+      <Forecast defaultCity="Kyiv"/>
       <Footer />
     </div>
   );

@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import axios from "axios";
 import Main from "./main";
 import FormatDate from "./FormatDate";
-import UnitTemp from "./UnitTemp"
-
+import UnitTemp from "./UnitTemp";
+import UnitFeel from "./UnitFeel";
+import Forecast from "./Forecast";
 import "./Form.css";
 
 export default function Form(props) {
@@ -17,6 +18,7 @@ export default function Form(props) {
       date:new Date(response.data.time*1000),
       city:response.data.city,
       temp:response.data.temperature.current,
+      feelTemp:response.data.temperature.feels_like,
       humidity:response.data.temperature.humidity,
       wind:response.data.wind.speed,
       description:response.data.condition.description,
@@ -86,18 +88,13 @@ export default function Form(props) {
             <img id="icon" src={weather.icon} alt={weather.description} width="48px" />
           </div>
           <div className="col-sm-10">
-            min <span id="min-temp">-2</span>
-            <a href="#top" className="c" id="C-tempMin">°C</a> |
-            <a href="#top" className="f" id="F-tempMin">°F</a>
-          </div>
-          <div className="col-sm-10">
-            max <span id="max-temp">+1</span>
-            <a href="#top" className="c" id="C-tempMax">°C</a> |
-            <a href="#top" className="f" id="F-tempMax">°F</a>
+            Feels like {" "}
+            <UnitFeel celc={weather.feelTemp} />
           </div>
         </div>
       </div>
-        </div>     
+      <Forecast place={weather.city}/>
+   </div>     
     )
   } else {
     search()
